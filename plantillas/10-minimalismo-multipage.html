@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hostal Norte | Multipágina – Minimalismo (Bootstrap)</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#111;--paper:#fafafa;--line:#dcdcdc;--moss:#5f8a6e}
+  body{font-family:'Jost',sans-serif;font-weight:300;background:var(--paper);color:var(--ink);font-size:1.05rem}
+  h1,h2,h3{font-weight:500;letter-spacing:-.01em}
+  .navbar{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:100}
+  .navbar-brand{font-weight:600;letter-spacing:.02em}
+  .navbar .nav-link{color:var(--ink);padding:.5rem 0;margin:0 1rem;border-bottom:1px solid transparent;border-radius:0}
+  .navbar .nav-link:hover,.navbar .nav-link.active{border-bottom-color:var(--moss);color:var(--ink)}
+  .navbar-toggler{border:0;font-size:1.7rem;padding:0}.navbar-toggler:focus{box-shadow:none;outline:2px solid var(--moss)}
+  .page{display:none}.page.active{display:block}
+  .btn-m{background:var(--ink);color:#fff;border-radius:0;padding:.75rem 2rem;border:1px solid var(--ink);transition:.2s;text-decoration:none;display:inline-block;font-weight:400}
+  .btn-m:hover{background:var(--moss);border-color:var(--moss);color:#fff}
+  .btn-o{border:1px solid var(--ink);color:var(--ink);border-radius:0;padding:.75rem 2rem;text-decoration:none;display:inline-block;transition:.2s}
+  .btn-o:hover{background:var(--ink);color:#fff}
+  .strip{height:46vh;min-height:260px;background:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=70') center/cover}
+  .band{height:340px;background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1800&q=70') center/cover;color:#fff;display:flex;align-items:center}
+  .rule{border-top:1px solid var(--line)}
+  .room img{width:100%;aspect-ratio:3/2;object-fit:cover}
+  .form-control,.form-select{border:0;border-bottom:1px solid var(--ink);border-radius:0;background:transparent;padding:.8rem 0}
+  .form-control:focus,.form-select:focus{box-shadow:none;border-bottom:2px solid var(--moss);background:transparent}
+  .soc{font-size:1.25rem;color:var(--ink);text-decoration:none}.soc:hover{color:var(--moss)}
+  .muted{color:#666}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--moss);outline-offset:4px}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand fs-4" href="#inicio">Hostal Norte</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"><i class="bi bi-list"></i></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto py-3 py-lg-0 align-items-lg-center">
+        <li><a data-nav class="nav-link" href="#inicio">Inicio</a></li>
+        <li><a data-nav class="nav-link" href="#habitaciones">Habitaciones</a></li>
+        <li><a data-nav class="nav-link" href="#hostal">El hostal</a></li>
+        <li><a data-nav class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <!-- INICIO -->
+  <section class="page" id="inicio">
+    <div class="container py-5 my-lg-4">
+      <div class="row"><div class="col-lg-9">
+        <h1 class="display-2" style="line-height:1.02">Una cama limpia, un lugar tranquilo.</h1>
+        <p class="fs-5 muted mt-4 col-md-8 px-0">Hostal pequeño en el norte, con seis habitaciones y un jardín. Sencillo, cálido y bien cuidado.</p>
+        <div class="d-flex gap-3 flex-wrap mt-4"><a href="#contacto" class="btn-m">Reservar</a><a href="#habitaciones" class="btn-o">Ver habitaciones</a></div>
+      </div></div>
+    </div>
+    <div class="strip" role="img" aria-label="Piscina del hostal"></div>
+    <div class="container py-5">
+      <div class="row g-5 text-center text-md-start">
+        <div class="col-md-4"><i class="bi bi-wifi fs-3" style="color:var(--moss)"></i><h2 class="h5 mt-3">Wi-Fi</h2><p class="muted mb-0">Rápido y gratuito en todo el hostal.</p></div>
+        <div class="col-md-4"><i class="bi bi-cup-hot fs-3" style="color:var(--moss)"></i><h2 class="h5 mt-3">Desayuno</h2><p class="muted mb-0">Incluido, de 7:30 a 10:30.</p></div>
+        <div class="col-md-4"><i class="bi bi-bicycle fs-3" style="color:var(--moss)"></i><h2 class="h5 mt-3">Bicicletas</h2><p class="muted mb-0">Para recorrer la zona sin costo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABITACIONES -->
+  <section class="page" id="habitaciones"><div class="container py-5">
+    <h2 class="display-5 mb-5">Habitaciones</h2>
+    <div class="row g-5">
+      <div class="col-md-6 col-lg-4 room"><img alt="Habitación individual" src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?auto=format&fit=crop&w=800&q=70"><div class="d-flex justify-content-between mt-3"><h3 class="h5">Individual</h3><span>$45</span></div><p class="muted">Cama de 90 cm, escritorio y baño compartido.</p></div>
+      <div class="col-md-6 col-lg-4 room"><img alt="Habitación doble" src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=70"><div class="d-flex justify-content-between mt-3"><h3 class="h5">Doble</h3><span>$70</span></div><p class="muted">Cama doble y baño privado.</p></div>
+      <div class="col-md-6 col-lg-4 room"><img alt="Habitación familiar" src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=70"><div class="d-flex justify-content-between mt-3"><h3 class="h5">Familiar</h3><span>$105</span></div><p class="muted">Para cuatro personas, con zona de estar.</p></div>
+    </div>
+    <div class="rule mt-5 pt-4"><a href="#contacto" class="btn-m">Consultar disponibilidad</a></div>
+  </div></section>
+
+  <!-- EL HOSTAL -->
+  <section class="page" id="hostal">
+    <div class="band"><div class="container"><h2 class="display-5 col-lg-7 px-0">Descanso sin ruido, a ritmo de pueblo.</h2></div></div>
+    <div class="container py-5"><div class="row g-5">
+      <div class="col-lg-6"><p>Abrimos en 2015 con una idea clara: ofrecer lo esencial y hacerlo bien. Sin televisores en las habitaciones, con ropa de cama de algodón y café de tostadores locales.</p></div>
+      <div class="col-lg-6"><dl class="row mb-0"><dt class="col-6 fw-normal muted rule py-3">Habitaciones</dt><dd class="col-6 rule py-3 mb-0">6</dd><dt class="col-6 fw-normal muted rule py-3">Check-in</dt><dd class="col-6 rule py-3 mb-0">15:00</dd><dt class="col-6 fw-normal muted rule py-3">Check-out</dt><dd class="col-6 rule py-3 mb-0">11:00</dd><dt class="col-6 fw-normal muted rule py-3">Mascotas</dt><dd class="col-6 rule py-3 mb-0">Bienvenidas</dd></dl></div>
+    </div></div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="page" id="contacto"><div class="container py-5"><div class="row g-5">
+    <div class="col-lg-5"><h2 class="display-5">Contacto</h2><p class="mt-4 mb-1">Camino Norte 18</p><p class="mb-1">+00 666 777 888</p><p>hola@hostalnorte.com</p></div>
+    <div class="col-lg-7"><form onsubmit="event.preventDefault();alert('Gracias, le responderemos pronto.')"><div class="row g-4">
+      <div class="col-md-6"><input class="form-control" placeholder="Nombre" required aria-label="Nombre"></div>
+      <div class="col-md-6"><input type="email" class="form-control" placeholder="Correo" required aria-label="Correo"></div>
+      <div class="col-md-6"><input type="date" class="form-control" aria-label="Llegada"></div>
+      <div class="col-md-6"><select class="form-select" aria-label="Habitación"><option>Individual</option><option>Doble</option><option>Familiar</option></select></div>
+      <div class="col-12"><textarea rows="3" class="form-control" placeholder="Mensaje" aria-label="Mensaje"></textarea></div>
+      <div class="col-12"><button class="btn-m w-100">Enviar</button></div></div></form></div>
+  </div></div></section>
+</main>
+
+<footer class="rule">
+  <div class="container py-4 d-flex flex-column flex-md-row gap-3 justify-content-between align-items-md-center">
+    <span class="fw-semibold">Hostal Norte</span><small class="muted">© 2026 · Plantilla de demostración</small>
+    <div class="d-flex gap-4"><a class="soc" aria-label="Facebook" href="#"><i class="bi bi-facebook"></i></a><a class="soc" aria-label="Instagram" href="#"><i class="bi bi-instagram"></i></a><a class="soc" aria-label="YouTube" href="#"><i class="bi bi-youtube"></i></a><a class="soc" aria-label="WhatsApp" href="#"><i class="bi bi-whatsapp"></i></a></div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const pages=[...document.querySelectorAll('.page')];
+  function route(){const h=(location.hash||'#inicio').slice(1);const p=pages.find(x=>x.id===h)||pages[0];
+    pages.forEach(x=>x.classList.toggle('active',x===p));
+    document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+p.id));
+    window.scrollTo(0,0);const c=document.querySelector('.navbar-collapse.show');if(c)bootstrap.Collapse.getOrCreateInstance(c).hide();}
+  addEventListener('hashchange',route);route();
+  document.querySelectorAll('img').forEach(i=>{const f=()=>{i.onerror=null;i.src='https://picsum.photos/seed/'+encodeURIComponent(i.alt||'hotel')+'/900/700'};i.addEventListener('error',f);if(i.complete&&i.naturalWidth===0)f()});
+</script>
+</body>
+</html>

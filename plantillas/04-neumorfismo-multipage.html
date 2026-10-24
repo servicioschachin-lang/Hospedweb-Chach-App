@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calma Suites | Multipágina – Neumorfismo (Bootstrap)</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#ebe5dc;--dk:#c3b9a8;--lt:#fffdf8;--ink:#463f35;--sage:#3f8f6b}
+  body{background:var(--bg);color:var(--ink);font-family:'Quicksand',sans-serif}
+  h1,h2,h3,.brand{font-family:'Lora',serif}
+  .raised{background:var(--bg);box-shadow:8px 8px 16px var(--dk),-8px -8px 16px var(--lt);border-radius:1.5rem}
+  .raised-sm{background:var(--bg);box-shadow:4px 4px 9px var(--dk),-4px -4px 9px var(--lt);border-radius:1rem}
+  .inset{background:var(--bg);box-shadow:inset 4px 4px 9px var(--dk),inset -4px -4px 9px var(--lt);border-radius:1rem}
+  .sage{color:var(--sage)}
+  .nb{background:var(--bg);box-shadow:4px 4px 9px var(--dk),-4px -4px 9px var(--lt);border:0;border-radius:1rem;color:var(--ink);font-weight:700;padding:.65rem 1.4rem;transition:.2s}
+  .nb:hover{color:var(--sage)}.nb:active,.nb.active{box-shadow:inset 3px 3px 7px var(--dk),inset -3px -3px 7px var(--lt);color:var(--sage)}
+  .navbar{position:sticky;top:0;z-index:100;background:rgba(235,229,220,.94);padding:1rem 0}
+  .navbar .box{padding:.7rem 1.2rem}
+  .navbar-toggler{border:0;box-shadow:4px 4px 9px var(--dk),-4px -4px 9px var(--lt);border-radius:1rem}
+  .navbar-toggler:focus{box-shadow:inset 3px 3px 7px var(--dk),inset -3px -3px 7px var(--lt)}
+  .page{display:none}.page.active{display:block}
+  .hero{border-radius:2rem;overflow:hidden;min-height:430px;background:linear-gradient(90deg,rgba(235,229,220,.96) 35%,rgba(235,229,220,.1)),url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1600&q=70') center/cover;display:flex;align-items:center}
+  @media(max-width:767px){.hero{background:linear-gradient(rgba(235,229,220,.9),rgba(235,229,220,.78)),url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=900&q=70') center/cover}}
+  .form-control,.form-select{background:var(--bg);border:0;box-shadow:inset 4px 4px 9px var(--dk),inset -4px -4px 9px var(--lt);border-radius:1rem;padding:.8rem 1.1rem;color:var(--ink)}
+  .form-control:focus,.form-select:focus{background:var(--bg);box-shadow:inset 4px 4px 9px var(--dk),inset -4px -4px 9px var(--lt),0 0 0 .2rem rgba(63,143,107,.35);color:var(--ink)}
+  .card-img-top{height:200px;object-fit:cover;border-radius:1.1rem}
+  .ic{width:60px;height:60px;display:grid;place-items:center;border-radius:50%;font-size:1.5rem}
+  .soc{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;color:var(--ink);text-decoration:none}.soc:hover{color:var(--sage)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--sage);outline-offset:3px}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <div class="raised w-100 box d-flex flex-wrap align-items-center">
+      <a class="brand fs-4 fw-bold text-decoration-none" style="color:var(--ink)" href="#inicio"><i class="bi bi-tree sage"></i> Calma Suites</a>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"><i class="bi bi-list fs-3"></i></button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto gap-2 mt-3 mt-lg-0 pb-2 pb-lg-0">
+          <li><a data-nav class="nb d-block text-center text-decoration-none" href="#inicio">Inicio</a></li>
+          <li><a data-nav class="nb d-block text-center text-decoration-none" href="#habitaciones">Habitaciones</a></li>
+          <li><a data-nav class="nb d-block text-center text-decoration-none" href="#nosotros">Nosotros</a></li>
+          <li><a data-nav class="nb d-block text-center text-decoration-none" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-4">
+  <!-- INICIO -->
+  <section class="page" id="inicio">
+    <div class="hero px-4 px-md-5 py-5">
+      <div style="max-width:520px">
+        <h1 class="display-4 fw-bold">Silencio, luz natural y buen descanso.</h1>
+        <p class="fs-5 mt-3">Suites tranquilas rodeadas de jardín, a diez minutos del centro.</p>
+        <div class="d-flex gap-3 mt-4 flex-wrap"><a href="#contacto" class="nb text-decoration-none sage">Reservar</a><a href="#habitaciones" class="nb text-decoration-none">Ver suites</a></div>
+      </div>
+    </div>
+    <div class="row g-4 mt-2">
+      <div class="col-md-4"><div class="raised p-4 text-center h-100"><div class="ic inset sage mx-auto"><i class="bi bi-moon"></i></div><h2 class="h5 mt-3">Sueño profundo</h2><p class="mb-0 small">Colchones ortopédicos y aislamiento acústico.</p></div></div>
+      <div class="col-md-4"><div class="raised p-4 text-center h-100"><div class="ic inset sage mx-auto"><i class="bi bi-flower3"></i></div><h2 class="h5 mt-3">Jardín interior</h2><p class="mb-0 small">Un patio con árboles para leer o meditar.</p></div></div>
+      <div class="col-md-4"><div class="raised p-4 text-center h-100"><div class="ic inset sage mx-auto"><i class="bi bi-cup-hot"></i></div><h2 class="h5 mt-3">Desayuno casero</h2><p class="mb-0 small">Pan, fruta y café de especialidad.</p></div></div>
+    </div>
+  </section>
+
+  <!-- HABITACIONES -->
+  <section class="page" id="habitaciones">
+    <h2 class="display-6 fw-bold my-4">Habitaciones</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4"><div class="raised p-3 h-100"><img class="card-img-top" alt="Suite jardín" src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?auto=format&fit=crop&w=800&q=70"><div class="p-2 pt-3"><h3 class="h5">Suite Jardín</h3><p class="small">Acceso directo al patio.</p><div class="d-flex justify-content-between align-items-center"><strong class="sage">$85</strong><a href="#contacto" class="nb text-decoration-none btn-sm py-2">Reservar</a></div></div></div></div>
+      <div class="col-md-6 col-lg-4"><div class="raised p-3 h-100"><img class="card-img-top" alt="Suite luz" src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=70"><div class="p-2 pt-3"><h3 class="h5">Suite Luz</h3><p class="small">Ventanales y escritorio amplio.</p><div class="d-flex justify-content-between align-items-center"><strong class="sage">$120</strong><a href="#contacto" class="nb text-decoration-none py-2">Reservar</a></div></div></div></div>
+      <div class="col-md-6 col-lg-4"><div class="raised p-3 h-100"><img class="card-img-top" alt="Suite familiar" src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=70"><div class="p-2 pt-3"><h3 class="h5">Suite Familiar</h3><p class="small">Dos dormitorios y cocina.</p><div class="d-flex justify-content-between align-items-center"><strong class="sage">$170</strong><a href="#contacto" class="nb text-decoration-none py-2">Reservar</a></div></div></div></div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="page" id="nosotros">
+    <div class="row g-4 align-items-center py-3">
+      <div class="col-lg-6"><div class="raised p-3"><img class="w-100 rounded-4" style="height:360px;object-fit:cover" alt="Recepción" src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1000&q=70"></div></div>
+      <div class="col-lg-6"><h2 class="display-6 fw-bold">Una casa para descansar</h2>
+        <p class="mt-3">Somos un hotel familiar con más de 15 años recibiendo viajeros. Creemos que el mejor lujo es dormir bien y sentirse en casa.</p>
+        <div class="d-flex gap-3 flex-wrap mt-4"><div class="inset px-4 py-3 text-center"><strong class="fs-4 d-block">15</strong><small>años</small></div><div class="inset px-4 py-3 text-center"><strong class="fs-4 d-block">32</strong><small>suites</small></div><div class="inset px-4 py-3 text-center"><strong class="fs-4 d-block">4.9</strong><small>reseñas</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="page" id="contacto">
+    <div class="row g-4 py-3">
+      <div class="col-lg-5"><h2 class="display-6 fw-bold">Contacto</h2>
+        <p class="mt-3"><i class="bi bi-geo-alt sage me-2"></i>Calle del Jardín 8</p><p><i class="bi bi-telephone sage me-2"></i>+00 444 555 666</p><p><i class="bi bi-envelope sage me-2"></i>hola@calmasuites.com</p></div>
+      <div class="col-lg-7"><form class="raised p-4" onsubmit="event.preventDefault();alert('¡Mensaje enviado!')"><div class="row g-3">
+        <div class="col-md-6"><input class="form-control" placeholder="Nombre" required aria-label="Nombre"></div>
+        <div class="col-md-6"><input type="email" class="form-control" placeholder="Correo" required aria-label="Correo"></div>
+        <div class="col-12"><textarea rows="4" class="form-control" placeholder="Cuéntanos tus fechas y preferencias" aria-label="Mensaje"></textarea></div>
+        <div class="col-12"><button class="nb w-100 sage">Enviar</button></div></div></form></div>
+    </div>
+  </section>
+</main>
+
+<footer class="container pb-4"><div class="raised p-4 d-flex flex-column flex-md-row gap-3 justify-content-between align-items-center">
+  <span class="brand fw-bold"><i class="bi bi-tree sage"></i> Calma Suites</span><small>© 2026 · Plantilla de demostración</small>
+  <div class="d-flex gap-3"><a class="soc raised-sm" aria-label="Facebook" href="#"><i class="bi bi-facebook"></i></a><a class="soc raised-sm" aria-label="Instagram" href="#"><i class="bi bi-instagram"></i></a><a class="soc raised-sm" aria-label="Pinterest" href="#"><i class="bi bi-pinterest"></i></a><a class="soc raised-sm" aria-label="WhatsApp" href="#"><i class="bi bi-whatsapp"></i></a></div>
+</div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const pages=[...document.querySelectorAll('.page')];
+  function route(){const h=(location.hash||'#inicio').slice(1);const p=pages.find(x=>x.id===h)||pages[0];
+    pages.forEach(x=>x.classList.toggle('active',x===p));
+    document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+p.id));
+    window.scrollTo(0,0);const c=document.querySelector('.navbar-collapse.show');if(c)bootstrap.Collapse.getOrCreateInstance(c).hide();}
+  addEventListener('hashchange',route);route();
+  document.querySelectorAll('img').forEach(i=>{const f=()=>{i.onerror=null;i.src='https://picsum.photos/seed/'+encodeURIComponent(i.alt||'hotel')+'/900/700'};i.addEventListener('error',f);if(i.complete&&i.naturalWidth===0)f()});
+</script>
+</body>
+</html>

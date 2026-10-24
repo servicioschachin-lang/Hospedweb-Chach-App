@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crystal Bay Resort | Multipágina – Glasmorfismo (Bootstrap)</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+<style>
+  :root{--sun:#ff8a5c;--rose:#e0457b;--plum:#2a0f3d}
+  body{font-family:'Outfit',sans-serif;color:#fff;min-height:100vh;
+    background:linear-gradient(160deg,rgba(42,15,61,.72),rgba(224,69,123,.45) 55%,rgba(255,138,92,.4)),url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1800&q=70') center/cover fixed}
+  .glass{background:rgba(255,255,255,.14);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.3);border-radius:1.5rem;box-shadow:0 10px 40px rgba(42,15,61,.35)}
+  .serif{font-family:'Playfair Display',serif;font-style:italic}
+  .navbar{margin:1rem auto;max-width:1140px;width:calc(100% - 2rem);position:sticky;top:1rem;z-index:100;border-radius:1.25rem}
+  .navbar .nav-link{color:#fff;opacity:.85;border-radius:.75rem;padding:.5rem 1rem}
+  .navbar .nav-link.active,.navbar .nav-link:hover{background:rgba(255,255,255,.22);opacity:1;color:#fff}
+  .navbar-toggler{border:1px solid rgba(255,255,255,.5)}.navbar-toggler-icon{filter:invert(1)}
+  .btn-sun{background:linear-gradient(90deg,var(--sun),var(--rose));color:#fff;border:0;border-radius:999px;padding:.7rem 1.8rem;font-weight:600}
+  .btn-sun:hover{color:#fff;filter:brightness(1.1)}
+  .btn-glass{background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:.7rem 1.8rem}
+  .btn-glass:hover{background:rgba(255,255,255,.32);color:#fff}
+  .page{display:none}.page.active{display:block;animation:in .5s ease}
+  @keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1}}
+  .form-control,.form-select{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:.9rem}
+  .form-control::placeholder{color:rgba(255,255,255,.7)}.form-control:focus,.form-select:focus{background:rgba(255,255,255,.25);color:#fff;box-shadow:0 0 0 .2rem rgba(255,138,92,.5)}
+  .form-select option{color:#000}
+  .card-img-top{height:210px;object-fit:cover;border-radius:1.5rem 1.5rem 0 0}
+  .social a{width:42px;height:42px;display:grid;place-items:center;color:#fff;text-decoration:none}
+  .social a:hover{background:rgba(255,255,255,.35)}
+  .hero-img{height:100%;min-height:320px;object-fit:cover;border-radius:1.5rem}
+  @media (prefers-reduced-motion:reduce){.page.active{animation:none}}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg glass px-3">
+  <a class="navbar-brand text-white fw-bold" href="#inicio"><i class="bi bi-sunset" style="color:var(--sun)"></i> Crystal Bay</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav ms-auto gap-lg-1 py-2 py-lg-0">
+      <li class="nav-item"><a data-nav class="nav-link" href="#inicio">Inicio</a></li>
+      <li class="nav-item"><a data-nav class="nav-link" href="#habitaciones">Habitaciones</a></li>
+      <li class="nav-item"><a data-nav class="nav-link" href="#servicios">Servicios</a></li>
+      <li class="nav-item"><a data-nav class="nav-link" href="#contacto">Contacto</a></li>
+      <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn btn-sun btn-sm px-3" href="#contacto">Reservar</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="container pb-5">
+  <!-- INICIO -->
+  <section class="page" id="inicio">
+    <div class="row align-items-center g-4 py-4 py-lg-5">
+      <div class="col-lg-7">
+        <p class="glass d-inline-block px-3 py-1 small mb-3"><i class="bi bi-geo-alt"></i> Bahía de Cristal · frente al mar</p>
+        <h1 class="display-3 fw-bold lh-1">Atardeceres que se quedan <span class="serif">contigo</span></h1>
+        <p class="lead mt-4 opacity-75">Un resort boutique con piscina, spa y gastronomía local, pensado para desconectar de verdad.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4"><a href="#habitaciones" class="btn btn-sun">Ver habitaciones</a><a href="#servicios" class="btn btn-glass">Nuestros servicios</a></div>
+      </div>
+      <div class="col-lg-5"><div class="glass p-2"><img class="hero-img w-100" alt="Piscina del resort" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=70"></div></div>
+    </div>
+    <div class="row g-4 mt-1">
+      <div class="col-md-4"><div class="glass p-4 h-100"><i class="bi bi-brightness-high fs-2" style="color:var(--sun)"></i><h3 class="h5 mt-3">Vista al mar</h3><p class="opacity-75 mb-0">Terrazas orientadas al oeste para ver cada puesta de sol.</p></div></div>
+      <div class="col-md-4"><div class="glass p-4 h-100"><i class="bi bi-cup-straw fs-2" style="color:var(--sun)"></i><h3 class="h5 mt-3">Bar en la piscina</h3><p class="opacity-75 mb-0">Cócteles de autor y cocina ligera todo el día.</p></div></div>
+      <div class="col-md-4"><div class="glass p-4 h-100"><i class="bi bi-heart fs-2" style="color:var(--sun)"></i><h3 class="h5 mt-3">Trato cercano</h3><p class="opacity-75 mb-0">Un equipo local que conoce los mejores rincones.</p></div></div>
+    </div>
+  </section>
+
+  <!-- HABITACIONES -->
+  <section class="page" id="habitaciones">
+    <h2 class="display-5 fw-bold py-4">Nuestras <span class="serif">habitaciones</span></h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4"><div class="glass h-100"><img class="card-img-top" alt="Habitación estándar" src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=70"><div class="p-4"><h3 class="h5">Estándar Brisa</h3><p class="opacity-75">Doble, aire acondicionado y balcón.</p><div class="d-flex justify-content-between align-items-center"><strong>$95 / noche</strong><a href="#contacto" class="btn btn-glass btn-sm">Reservar</a></div></div></div></div>
+      <div class="col-md-6 col-lg-4"><div class="glass h-100"><img class="card-img-top" alt="Suite deluxe" src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=70"><div class="p-4"><h3 class="h5">Deluxe Coral</h3><p class="opacity-75">Cama king, bañera y vista parcial al mar.</p><div class="d-flex justify-content-between align-items-center"><strong>$150 / noche</strong><a href="#contacto" class="btn btn-glass btn-sm">Reservar</a></div></div></div></div>
+      <div class="col-md-6 col-lg-4"><div class="glass h-100"><img class="card-img-top" alt="Suite presidencial" src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=70"><div class="p-4"><h3 class="h5">Suite Atardecer</h3><p class="opacity-75">Sala, terraza privada y servicio de mayordomo.</p><div class="d-flex justify-content-between align-items-center"><strong>$320 / noche</strong><a href="#contacto" class="btn btn-glass btn-sm">Reservar</a></div></div></div></div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="page" id="servicios">
+    <h2 class="display-5 fw-bold py-4">Servicios <span class="serif">incluidos</span></h2>
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-5"><div class="glass p-2 h-100"><img class="hero-img w-100" alt="Spa" src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=70"></div></div>
+      <div class="col-lg-7"><div class="row g-3">
+        <div class="col-sm-6"><div class="glass p-4 h-100"><i class="bi bi-flower2 fs-3" style="color:var(--sun)"></i><h3 class="h6 mt-2">Spa</h3><p class="small opacity-75 mb-0">Masajes, sauna y aromaterapia.</p></div></div>
+        <div class="col-sm-6"><div class="glass p-4 h-100"><i class="bi bi-egg-fried fs-3" style="color:var(--sun)"></i><h3 class="h6 mt-2">Restaurante</h3><p class="small opacity-75 mb-0">Cocina de mar y producto local.</p></div></div>
+        <div class="col-sm-6"><div class="glass p-4 h-100"><i class="bi bi-bicycle fs-3" style="color:var(--sun)"></i><h3 class="h6 mt-2">Bicicletas</h3><p class="small opacity-75 mb-0">Rutas costeras sin costo.</p></div></div>
+        <div class="col-sm-6"><div class="glass p-4 h-100"><i class="bi bi-car-front fs-3" style="color:var(--sun)"></i><h3 class="h6 mt-2">Traslado aeropuerto</h3><p class="small opacity-75 mb-0">Reserva con 24 h de antelación.</p></div></div>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="page" id="contacto">
+    <div class="row g-4 py-4">
+      <div class="col-lg-5"><h2 class="display-5 fw-bold">Reserva o <span class="serif">escríbenos</span></h2>
+        <p class="opacity-75 mt-3">Respondemos en menos de 24 horas.</p>
+        <p class="mb-1"><i class="bi bi-geo-alt me-2"></i>Paseo Marítimo 45, Bahía de Cristal</p>
+        <p class="mb-1"><i class="bi bi-telephone me-2"></i>+00 987 654 321</p>
+        <p><i class="bi bi-envelope me-2"></i>reservas@crystalbay.com</p>
+      </div>
+      <div class="col-lg-7"><form class="glass p-4" onsubmit="event.preventDefault();alert('¡Mensaje enviado!')">
+        <div class="row g-3">
+          <div class="col-md-6"><input class="form-control" placeholder="Nombre" required aria-label="Nombre"></div>
+          <div class="col-md-6"><input type="email" class="form-control" placeholder="Correo" required aria-label="Correo"></div>
+          <div class="col-md-6"><input type="date" class="form-control" aria-label="Llegada"></div>
+          <div class="col-md-6"><select class="form-select" aria-label="Habitación"><option>Estándar Brisa</option><option>Deluxe Coral</option><option>Suite Atardecer</option></select></div>
+          <div class="col-12"><textarea rows="4" class="form-control" placeholder="Mensaje" aria-label="Mensaje"></textarea></div>
+          <div class="col-12"><button class="btn btn-sun w-100">Enviar solicitud</button></div>
+        </div></form></div>
+    </div>
+  </section>
+</main>
+
+<footer class="container pb-4">
+  <div class="glass p-4 d-flex flex-column flex-md-row gap-3 justify-content-between align-items-center">
+    <span class="fw-bold"><i class="bi bi-sunset" style="color:var(--sun)"></i> Crystal Bay Resort</span>
+    <small class="opacity-75">© 2026 · Plantilla de demostración</small>
+    <div class="social d-flex gap-2">
+      <a class="glass rounded-circle" aria-label="Facebook" href="#"><i class="bi bi-facebook"></i></a>
+      <a class="glass rounded-circle" aria-label="Instagram" href="#"><i class="bi bi-instagram"></i></a>
+      <a class="glass rounded-circle" aria-label="TikTok" href="#"><i class="bi bi-tiktok"></i></a>
+      <a class="glass rounded-circle" aria-label="YouTube" href="#"><i class="bi bi-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const pages=[...document.querySelectorAll('.page')];
+  function route(){const h=(location.hash||'#inicio').slice(1);const p=pages.find(x=>x.id===h)||pages[0];
+    pages.forEach(x=>x.classList.toggle('active',x===p));
+    document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+p.id));
+    window.scrollTo(0,0);const c=document.querySelector('.navbar-collapse.show');if(c)bootstrap.Collapse.getOrCreateInstance(c).hide();}
+  addEventListener('hashchange',route);route();
+  document.querySelectorAll('img').forEach(i=>{const f=()=>{i.onerror=null;i.src='https://picsum.photos/seed/'+encodeURIComponent(i.alt||'hotel')+'/900/700'};i.addEventListener('error',f);if(i.complete&&i.naturalWidth===0)f()});
+</script>
+</body>
+</html>

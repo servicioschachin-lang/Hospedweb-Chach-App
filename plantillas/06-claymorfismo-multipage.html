@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Playa Clay Lodge | Multipágina – Claymorfismo (Bootstrap)</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{--sky:#8fd3ff;--peach:#ffc4a3;--coral:#ff8f7a;--lav:#d4c2ff;--sun:#ffe27a;--bgc:#e4f3ff;--ink:#1f3b57}
+  body{font-family:'Baloo 2',sans-serif;background:var(--bgc);color:var(--ink);font-size:1.05rem}
+  .clay{border-radius:2.2rem;box-shadow:10px 14px 26px rgba(31,59,87,.2),inset -9px -9px 16px rgba(31,59,87,.13),inset 9px 9px 16px rgba(255,255,255,.8)}
+  .clay-sm{border-radius:1.4rem;border:0;color:var(--ink);font-weight:600;box-shadow:5px 7px 13px rgba(31,59,87,.22),inset -4px -4px 8px rgba(31,59,87,.14),inset 4px 4px 8px rgba(255,255,255,.75);transition:.2s;display:inline-block;text-decoration:none}
+  .clay-sm:hover{transform:translateY(-3px);color:var(--ink)}.clay-sm:active{transform:translateY(1px)}
+  .b-sky{background:var(--sky)}.b-peach{background:var(--peach)}.b-coral{background:var(--coral)}.b-lav{background:var(--lav)}.b-sun{background:var(--sun)}.b-w{background:#fff}
+  .navbar{position:sticky;top:0;z-index:100;padding:1rem 0;background:rgba(228,243,255,.92)}
+  .navbar-toggler{border:0;border-radius:1.2rem;box-shadow:4px 5px 10px rgba(31,59,87,.22),inset -3px -3px 6px rgba(31,59,87,.14),inset 3px 3px 6px rgba(255,255,255,.7);background:var(--coral)}
+  .navbar-toggler:focus{box-shadow:none}
+  .page{display:none}.page.active{display:block}
+  .hero{min-height:480px;border-radius:2.5rem;overflow:hidden;display:flex;align-items:flex-end;background:linear-gradient(180deg,rgba(143,211,255,.05) 30%,rgba(31,59,87,.7)),url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=70') center/cover;color:#fff}
+  .hero h1{text-shadow:0 3px 12px rgba(0,0,0,.35)}
+  .card-img-top{height:200px;object-fit:cover;border-radius:1.6rem}
+  .form-control,.form-select{border:0;border-radius:1.2rem;padding:.8rem 1.2rem;background:#fff;box-shadow:inset 4px 4px 9px rgba(31,59,87,.15),inset -4px -4px 9px #fff}
+  .form-control:focus,.form-select:focus{box-shadow:inset 4px 4px 9px rgba(31,59,87,.15),0 0 0 .25rem rgba(255,143,122,.5)}
+  .soc{width:46px;height:46px;display:grid;place-items:center;font-size:1.1rem}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <div class="clay b-sun w-100 px-3 px-lg-4 py-2 d-flex flex-wrap align-items-center">
+      <a class="fs-3 fw-bolder text-decoration-none" style="color:var(--ink)" href="#inicio"><i class="bi bi-umbrella-fill" style="color:var(--coral)"></i> Playa Clay</a>
+      <button class="navbar-toggler ms-auto text-white fs-3 px-3 py-1" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"><i class="bi bi-list"></i></button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto gap-2 py-3 py-lg-0 text-center">
+          <li><a data-nav class="clay-sm b-sky px-4 py-2 w-100" href="#inicio">Inicio</a></li>
+          <li><a data-nav class="clay-sm b-peach px-4 py-2 w-100" href="#cabanas">Cabañas</a></li>
+          <li><a data-nav class="clay-sm b-lav px-4 py-2 w-100" href="#actividades">Actividades</a></li>
+          <li><a data-nav class="clay-sm b-coral px-4 py-2 w-100" href="#reservar">Reservar</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-4">
+  <!-- INICIO -->
+  <section class="page" id="inicio">
+    <div class="hero p-4 p-md-5"><div><h1 class="display-3 fw-bolder">Pies en la arena, cabeza en vacaciones</h1><p class="fs-5 col-md-8 px-0">Cabañas coloridas a 30 pasos del mar. Sol, olas y hamacas incluidas.</p><a href="#reservar" class="clay-sm b-sun px-5 py-3 fs-5 mt-2">Quiero reservar</a></div></div>
+    <div class="row g-4 mt-1">
+      <div class="col-6 col-lg-3"><div class="clay b-sky p-4 text-center h-100"><i class="bi bi-brightness-high-fill fs-1"></i><p class="fw-bold mb-0 mt-2">300 días de sol</p></div></div>
+      <div class="col-6 col-lg-3"><div class="clay b-peach p-4 text-center h-100"><i class="bi bi-tsunami fs-1"></i><p class="fw-bold mb-0 mt-2">Playa privada</p></div></div>
+      <div class="col-6 col-lg-3"><div class="clay b-lav p-4 text-center h-100"><i class="bi bi-cup-straw fs-1"></i><p class="fw-bold mb-0 mt-2">Bar de jugos</p></div></div>
+      <div class="col-6 col-lg-3"><div class="clay b-sun p-4 text-center h-100"><i class="bi bi-emoji-sunglasses fs-1"></i><p class="fw-bold mb-0 mt-2">Cero estrés</p></div></div>
+    </div>
+  </section>
+
+  <!-- CABAÑAS -->
+  <section class="page" id="cabanas">
+    <h2 class="display-5 fw-bolder my-4">Cabañas</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4"><div class="clay b-w p-3 h-100"><img class="card-img-top" alt="Cabaña mar" src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=70"><h3 class="mt-3 fw-bold">Cabaña Mar</h3><p>Hamaca y vista al océano.</p><div class="d-flex justify-content-between align-items-center"><strong class="fs-5">$80</strong><a href="#reservar" class="clay-sm b-sky px-4 py-2">Elegir</a></div></div></div>
+      <div class="col-md-6 col-lg-4"><div class="clay b-w p-3 h-100"><img class="card-img-top" alt="Cabaña palmera" src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=70"><h3 class="mt-3 fw-bold">Cabaña Palmera</h3><p>Terraza entre palmeras.</p><div class="d-flex justify-content-between align-items-center"><strong class="fs-5">$105</strong><a href="#reservar" class="clay-sm b-peach px-4 py-2">Elegir</a></div></div></div>
+      <div class="col-md-6 col-lg-4"><div class="clay b-w p-3 h-100"><img class="card-img-top" alt="Cabaña coral" src="https://images.unsplash.com/photo-1535827841776-24afc1e255ac?auto=format&fit=crop&w=800&q=70"><h3 class="mt-3 fw-bold">Cabaña Coral</h3><p>Para 4 personas con cocina.</p><div class="d-flex justify-content-between align-items-center"><strong class="fs-5">$150</strong><a href="#reservar" class="clay-sm b-lav px-4 py-2">Elegir</a></div></div></div>
+    </div>
+  </section>
+
+  <!-- ACTIVIDADES -->
+  <section class="page" id="actividades">
+    <h2 class="display-5 fw-bolder my-4">Actividades</h2>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="clay b-coral p-4 h-100"><i class="bi bi-water fs-1"></i><h3 class="fw-bold mt-2">Surf y snorkel</h3><p class="mb-0">Clases para principiantes cada mañana.</p></div></div>
+      <div class="col-md-4"><div class="clay b-sun p-4 h-100"><i class="bi bi-sunset fs-1"></i><h3 class="fw-bold mt-2">Yoga al atardecer</h3><p class="mb-0">Sesión grupal frente al mar.</p></div></div>
+      <div class="col-md-4"><div class="clay b-sky p-4 h-100"><i class="bi bi-fire fs-1"></i><h3 class="fw-bold mt-2">Fogata nocturna</h3><p class="mb-0">Música, malvaviscos y estrellas.</p></div></div>
+    </div>
+  </section>
+
+  <!-- RESERVAR -->
+  <section class="page" id="reservar">
+    <div class="row g-4 py-3 align-items-center">
+      <div class="col-lg-5"><h2 class="display-5 fw-bolder">¡Reserva tu cabaña!</h2><p class="fs-5">Te respondemos el mismo día.</p><p class="mb-1"><i class="bi bi-geo-alt-fill me-2" style="color:var(--coral)"></i>Playa Dorada s/n</p><p class="mb-1"><i class="bi bi-telephone-fill me-2" style="color:var(--coral)"></i>+00 321 654 987</p><p><i class="bi bi-envelope-fill me-2" style="color:var(--coral)"></i>hola@playaclay.com</p></div>
+      <div class="col-lg-7"><form class="clay b-peach p-4" onsubmit="event.preventDefault();alert('¡Reserva enviada!')"><div class="row g-3">
+        <div class="col-md-6"><input class="form-control" placeholder="Nombre" required aria-label="Nombre"></div>
+        <div class="col-md-6"><input type="email" class="form-control" placeholder="Correo" required aria-label="Correo"></div>
+        <div class="col-md-6"><input type="date" class="form-control" aria-label="Llegada"></div>
+        <div class="col-md-6"><select class="form-select" aria-label="Cabaña"><option>Cabaña Mar</option><option>Cabaña Palmera</option><option>Cabaña Coral</option></select></div>
+        <div class="col-12"><button class="clay-sm b-sun w-100 py-3 fs-5">Enviar reserva</button></div></div></form></div>
+    </div>
+  </section>
+</main>
+
+<footer class="container pb-4"><div class="clay b-lav p-4 d-flex flex-column flex-md-row gap-3 justify-content-between align-items-center">
+  <span class="fw-bolder fs-5"><i class="bi bi-umbrella-fill" style="color:var(--coral)"></i> Playa Clay Lodge</span><small>© 2026 · Plantilla de demostración</small>
+  <div class="d-flex gap-3"><a class="clay-sm b-sky soc" aria-label="Facebook" href="#"><i class="bi bi-facebook"></i></a><a class="clay-sm b-peach soc" aria-label="Instagram" href="#"><i class="bi bi-instagram"></i></a><a class="clay-sm b-sun soc" aria-label="TikTok" href="#"><i class="bi bi-tiktok"></i></a><a class="clay-sm b-coral soc" aria-label="WhatsApp" href="#"><i class="bi bi-whatsapp"></i></a></div>
+</div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const pages=[...document.querySelectorAll('.page')];
+  function route(){const h=(location.hash||'#inicio').slice(1);const p=pages.find(x=>x.id===h)||pages[0];
+    pages.forEach(x=>x.classList.toggle('active',x===p));
+    document.querySelectorAll('[data-nav]').forEach(a=>a.style.outline=a.getAttribute('href')==='#'+p.id?'3px solid var(--ink)':'');
+    window.scrollTo(0,0);const c=document.querySelector('.navbar-collapse.show');if(c)bootstrap.Collapse.getOrCreateInstance(c).hide();}
+  addEventListener('hashchange',route);route();
+  document.querySelectorAll('img').forEach(i=>{const f=()=>{i.onerror=null;i.src='https://picsum.photos/seed/'+encodeURIComponent(i.alt||'hotel')+'/900/700'};i.addEventListener('error',f);if(i.complete&&i.naturalWidth===0)f()});
+</script>
+</body>
+</html>

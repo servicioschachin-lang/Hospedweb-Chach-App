@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soft Stay Hotel | Landing – Neumorfismo (Tailwind)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<style>
+  :root{--bg:#e0e5ec;--dark:#a3b1c6;--light:#ffffff;--ink:#3d4659;--accent:#5b6cf0}
+  body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--ink)}
+  .raised{background:var(--bg);box-shadow:9px 9px 18px var(--dark),-9px -9px 18px var(--light)}
+  .raised-sm{background:var(--bg);box-shadow:5px 5px 10px var(--dark),-5px -5px 10px var(--light)}
+  .inset{background:var(--bg);box-shadow:inset 5px 5px 10px var(--dark),inset -5px -5px 10px var(--light)}
+  .press{transition:box-shadow .2s,transform .2s}
+  .press:hover{transform:translateY(-1px)}
+  .press:active{box-shadow:inset 4px 4px 8px var(--dark),inset -4px -4px 8px var(--light);transform:none}
+  .accent{color:var(--accent)}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  input,select{background:transparent;outline:none}
+</style>
+</head>
+<body>
+<header class="sticky top-0 z-50 px-4 py-4" style="background:rgba(224,229,236,.92)">
+  <nav class="max-w-6xl mx-auto raised rounded-3xl px-6 py-3 flex items-center justify-between">
+    <a href="#inicio" class="font-extrabold text-lg"><i class="bi bi-moon-stars accent"></i> Soft Stay</a>
+    <ul class="hidden md:flex gap-3 text-sm font-semibold">
+      <li><a class="press raised-sm rounded-xl px-4 py-2 inline-block" href="#inicio">Inicio</a></li>
+      <li><a class="press raised-sm rounded-xl px-4 py-2 inline-block" href="#habitaciones">Habitaciones</a></li>
+      <li><a class="press raised-sm rounded-xl px-4 py-2 inline-block" href="#servicios">Servicios</a></li>
+      <li><a class="press raised-sm rounded-xl px-4 py-2 inline-block" href="#contacto">Contacto</a></li>
+    </ul>
+    <button id="burger" aria-label="Abrir menú" aria-expanded="false" class="md:hidden raised-sm press rounded-xl w-11 h-11 text-xl"><i class="bi bi-list"></i></button>
+  </nav>
+  <div id="mobileMenu" class="hidden md:hidden max-w-6xl mx-auto mt-4 raised rounded-3xl p-5">
+    <ul class="grid gap-3 text-center font-semibold">
+      <li><a class="press raised-sm rounded-xl py-3 block" href="#inicio">Inicio</a></li>
+      <li><a class="press raised-sm rounded-xl py-3 block" href="#habitaciones">Habitaciones</a></li>
+      <li><a class="press raised-sm rounded-xl py-3 block" href="#servicios">Servicios</a></li>
+      <li><a class="press raised-sm rounded-xl py-3 block" href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- HERO con imagen enmarcada -->
+<section id="inicio" class="max-w-6xl mx-auto px-6 py-12 lg:py-20 grid lg:grid-cols-2 gap-12 items-center">
+  <div>
+    <h1 class="text-4xl sm:text-6xl font-extrabold leading-[1.05]">Un hotel que se siente como respirar hondo.</h1>
+    <p class="mt-6 text-lg opacity-80 max-w-md">Habitaciones silenciosas, camas suaves y detalles pensados para que el descanso sea lo único en tu agenda.</p>
+    <div class="mt-8 flex flex-wrap gap-5">
+      <a href="#contacto" class="press raised rounded-2xl px-8 py-4 font-bold accent">Reservar</a>
+      <a href="#habitaciones" class="press raised rounded-2xl px-8 py-4 font-bold">Ver habitaciones</a>
+    </div>
+    <div class="mt-10 flex gap-6">
+      <div class="inset rounded-2xl px-5 py-3 text-center"><p class="text-2xl font-extrabold">48</p><p class="text-xs opacity-70">Habitaciones</p></div>
+      <div class="inset rounded-2xl px-5 py-3 text-center"><p class="text-2xl font-extrabold">4.8</p><p class="text-xs opacity-70">Valoración</p></div>
+      <div class="inset rounded-2xl px-5 py-3 text-center"><p class="text-2xl font-extrabold">24h</p><p class="text-xs opacity-70">Recepción</p></div>
+    </div>
+  </div>
+  <div class="raised rounded-[2.5rem] p-4"><img alt="Habitación luminosa" class="rounded-[2rem] w-full h-[26rem] object-cover" src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=70"></div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="max-w-6xl mx-auto px-6 py-16">
+  <h2 class="text-3xl font-extrabold">Servicios</h2>
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+    <div class="raised rounded-3xl p-6 text-center"><div class="inset w-16 h-16 rounded-full grid place-items-center mx-auto text-2xl accent"><i class="bi bi-wifi"></i></div><h3 class="font-bold mt-4">Wi-Fi</h3></div>
+    <div class="raised rounded-3xl p-6 text-center"><div class="inset w-16 h-16 rounded-full grid place-items-center mx-auto text-2xl accent"><i class="bi bi-cup-hot"></i></div><h3 class="font-bold mt-4">Desayuno</h3></div>
+    <div class="raised rounded-3xl p-6 text-center"><div class="inset w-16 h-16 rounded-full grid place-items-center mx-auto text-2xl accent"><i class="bi bi-p-circle"></i></div><h3 class="font-bold mt-4">Parking</h3></div>
+    <div class="raised rounded-3xl p-6 text-center"><div class="inset w-16 h-16 rounded-full grid place-items-center mx-auto text-2xl accent"><i class="bi bi-flower1"></i></div><h3 class="font-bold mt-4">Spa</h3></div>
+  </div>
+</section>
+
+<!-- HABITACIONES -->
+<section id="habitaciones" class="max-w-6xl mx-auto px-6 py-16">
+  <h2 class="text-3xl font-extrabold">Habitaciones</h2>
+  <div class="grid md:grid-cols-3 gap-8 mt-8">
+    <article class="raised rounded-3xl p-4"><img loading="lazy" alt="Habitación sencilla" class="rounded-2xl h-52 w-full object-cover" src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?auto=format&fit=crop&w=800&q=70"><div class="p-3"><h3 class="font-bold text-lg mt-2">Sencilla</h3><p class="text-sm opacity-70">Cama doble, escritorio y baño privado.</p><div class="flex items-center justify-between mt-4"><span class="font-extrabold accent">$70</span><a href="#contacto" class="press raised-sm rounded-xl px-4 py-2 text-sm font-bold">Reservar</a></div></div></article>
+    <article class="raised rounded-3xl p-4"><img loading="lazy" alt="Habitación doble" class="rounded-2xl h-52 w-full object-cover" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=70"><div class="p-3"><h3 class="font-bold text-lg mt-2">Doble confort</h3><p class="text-sm opacity-70">Dos camas, zona de estar y balcón.</p><div class="flex items-center justify-between mt-4"><span class="font-extrabold accent">$110</span><a href="#contacto" class="press raised-sm rounded-xl px-4 py-2 text-sm font-bold">Reservar</a></div></div></article>
+    <article class="raised rounded-3xl p-4"><img loading="lazy" alt="Suite" class="rounded-2xl h-52 w-full object-cover" src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=800&q=70"><div class="p-3"><h3 class="font-bold text-lg mt-2">Suite</h3><p class="text-sm opacity-70">Sala independiente y cama king size.</p><div class="flex items-center justify-between mt-4"><span class="font-extrabold accent">$180</span><a href="#contacto" class="press raised-sm rounded-xl px-4 py-2 text-sm font-bold">Reservar</a></div></div></article>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="max-w-4xl mx-auto px-6 py-16">
+  <div class="raised rounded-[2rem] p-8 sm:p-12">
+    <h2 class="text-3xl font-extrabold">Reserva tu estancia</h2>
+    <form class="grid sm:grid-cols-2 gap-5 mt-8" onsubmit="event.preventDefault();alert('¡Solicitud enviada!')">
+      <input class="inset rounded-2xl px-5 py-3" placeholder="Nombre" required aria-label="Nombre">
+      <input class="inset rounded-2xl px-5 py-3" type="email" placeholder="Correo" required aria-label="Correo">
+      <input class="inset rounded-2xl px-5 py-3" type="date" aria-label="Llegada">
+      <select class="inset rounded-2xl px-5 py-3" aria-label="Habitación"><option>Sencilla</option><option>Doble confort</option><option>Suite</option></select>
+      <button class="press raised rounded-2xl py-3 font-bold accent sm:col-span-2">Enviar solicitud</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row gap-6 items-center justify-between">
+  <p class="font-extrabold"><i class="bi bi-moon-stars accent"></i> Soft Stay Hotel</p>
+  <p class="text-sm opacity-70">Calle Serena 12 · +00 111 222 333 · hola@softstay.com</p>
+  <div class="flex gap-4">
+    <a aria-label="Facebook" href="#" class="press raised-sm w-11 h-11 rounded-full grid place-items-center"><i class="bi bi-facebook"></i></a>
+    <a aria-label="Instagram" href="#" class="press raised-sm w-11 h-11 rounded-full grid place-items-center"><i class="bi bi-instagram"></i></a>
+    <a aria-label="LinkedIn" href="#" class="press raised-sm w-11 h-11 rounded-full grid place-items-center"><i class="bi bi-linkedin"></i></a>
+    <a aria-label="WhatsApp" href="#" class="press raised-sm w-11 h-11 rounded-full grid place-items-center"><i class="bi bi-whatsapp"></i></a>
+  </div>
+</footer>
+<script>
+  const b=document.getElementById('burger'),m=document.getElementById('mobileMenu');
+  b.addEventListener('click',()=>{const o=m.classList.toggle('hidden');b.setAttribute('aria-expanded',!o);b.innerHTML=o?'<i class="bi bi-list"></i>':'<i class="bi bi-x-lg"></i>'});
+  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.add('hidden');b.innerHTML='<i class="bi bi-list"></i>'}));
+  document.querySelectorAll('img').forEach(i=>{const f=()=>{i.onerror=null;i.src='https://picsum.photos/seed/'+encodeURIComponent(i.alt||'hotel')+'/900/700'};i.addEventListener('error',f);if(i.complete&&i.naturalWidth===0)f()});
+</script>
+</body>
+</html>

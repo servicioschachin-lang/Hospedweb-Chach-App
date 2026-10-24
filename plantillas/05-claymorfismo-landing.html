@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casita Candy Inn | Landing – Claymorfismo (Tailwind)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<style>
+  :root{--pink:#ffb3c7;--yellow:#ffe08a;--mint:#a8ecd0;--lilac:#c9b8ff;--ink:#4a3552;--cream:#fff6ef}
+  body{font-family:'Fredoka',sans-serif;background:var(--cream);color:var(--ink)}
+  .clay{border-radius:2rem;box-shadow:12px 12px 24px rgba(74,53,82,.18),inset -8px -8px 14px rgba(74,53,82,.12),inset 8px 8px 14px rgba(255,255,255,.75)}
+  .clay-sm{border-radius:1.25rem;box-shadow:6px 6px 12px rgba(74,53,82,.2),inset -4px -4px 8px rgba(74,53,82,.12),inset 4px 4px 8px rgba(255,255,255,.7);transition:.2s}
+  .clay-sm:hover{transform:translateY(-3px) scale(1.03)}
+  .clay-sm:active{transform:translateY(1px) scale(.98);box-shadow:3px 3px 6px rgba(74,53,82,.2),inset -2px -2px 5px rgba(74,53,82,.12),inset 2px 2px 5px rgba(255,255,255,.7)}
+  .bg-pink{background:var(--pink)}.bg-yellow{background:var(--yellow)}.bg-mint{background:var(--mint)}.bg-lilac{background:var(--lilac)}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+  .float{animation:fl 5s ease-in-out infinite}@keyframes fl{50%{transform:translateY(-10px)}}
+  @media (prefers-reduced-motion:reduce){.float{animation:none}}
+</style>
+</head>
+<body>
+<header class="sticky top-0 z-50 px-4 pt-4">
+  <nav class="clay bg-yellow max-w-6xl mx-auto px-5 py-3 flex items-center justify-between" style="border-radius:2rem">
+    <a href="#inicio" class="text-xl font-bold"><i class="bi bi-house-heart-fill text-pink-500"></i> Casita Candy</a>
+    <ul class="hidden md:flex gap-3 font-medium">
+      <li><a class="clay-sm bg-pink px-5 py-2 inline-block" href="#inicio">Inicio</a></li>
+      <li><a class="clay-sm bg-mint px-5 py-2 inline-block" href="#habitaciones">Cuartos</a></li>
+      <li><a class="clay-sm bg-lilac px-5 py-2 inline-block" href="#servicios">Servicios</a></li>
+      <li><a class="clay-sm bg-white px-5 py-2 inline-block" href="#reservar">Reservar</a></li>
+    </ul>
+    <button id="burger" aria-label="Abrir menú" aria-expanded="false" class="md:hidden clay-sm bg-pink w-11 h-11 text-xl"><i class="bi bi-list"></i></button>
+  </nav>
+  <div id="mobileMenu" class="hidden md:hidden max-w-6xl mx-auto mt-3 clay bg-lilac p-5">
+    <ul class="grid gap-3 text-center font-medium">
+      <li><a class="clay-sm bg-pink py-3 block" href="#inicio">Inicio</a></li>
+      <li><a class="clay-sm bg-mint py-3 block" href="#habitaciones">Cuartos</a></li>
+      <li><a class="clay-sm bg-yellow py-3 block" href="#servicios">Servicios</a></li>
+      <li><a class="clay-sm bg-white py-3 block" href="#reservar">Reservar</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="inicio" class="max-w-6xl mx-auto px-6 py-12 lg:py-16 grid lg:grid-cols-2 gap-10 items-center">
+  <div>
+    <span class="clay-sm bg-mint px-4 py-1.5 inline-block text-sm font-medium"><i class="bi bi-balloon-heart"></i> Ideal para familias</span>
+    <h1 class="mt-5 text-5xl sm:text-6xl font-bold leading-[1.05]">Tu hotelito de colores favorito</h1>
+    <p class="mt-5 text-lg opacity-80 max-w-md">Cuartos alegres, piscina pequeña y desayunos con pancakes. Aquí todos se sienten bienvenidos.</p>
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a href="#reservar" class="clay-sm bg-pink px-8 py-4 font-semibold text-lg">Reservar</a>
+      <a href="#habitaciones" class="clay-sm bg-yellow px-8 py-4 font-semibold text-lg">Ver cuartos</a>
+    </div>
+  </div>
+  <div class="relative">
+    <div class="clay bg-lilac p-4 float"><img alt="Piscina del hotel" class="w-full h-80 sm:h-96 object-cover" style="border-radius:1.5rem" src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1000&q=70"></div>
+    <div class="clay-sm bg-yellow absolute -bottom-5 -left-3 px-5 py-3 font-semibold"><i class="bi bi-star-fill text-orange-400"></i> 4.9 de 5</div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="max-w-6xl mx-auto px-6 py-14">
+  <h2 class="text-3xl sm:text-4xl font-bold text-center">Pequeños detalles felices</h2>
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+    <div class="clay bg-pink p-6 text-center"><i class="bi bi-wifi text-4xl"></i><h3 class="font-semibold mt-3">Wi-Fi gratis</h3></div>
+    <div class="clay bg-mint p-6 text-center"><i class="bi bi-emoji-smile text-4xl"></i><h3 class="font-semibold mt-3">Club infantil</h3></div>
+    <div class="clay bg-yellow p-6 text-center"><i class="bi bi-cup-straw text-4xl"></i><h3 class="font-semibold mt-3">Desayuno</h3></div>
+    <div class="clay bg-lilac p-6 text-center"><i class="bi bi-water text-4xl"></i><h3 class="font-semibold mt-3">Piscina</h3></div>
+  </div>
+</section>
+
+<!-- HABITACIONES -->
+<section id="habitaciones" class="py-14" style="background:linear-gradient(var(--mint),#d9f7ea)">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl sm:text-4xl font-bold">Nuestros cuartos</h2>
+    <div class="grid md:grid-cols-3 gap-8 mt-10">
+      <article class="clay bg-white p-4"><img loading="lazy" alt="Cuarto sol" class="h-48 w-full object-cover" style="border-radius:1.4rem" src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=70"><h3 class="font-semibold text-xl mt-4">Cuarto Sol</h3><p class="text-sm opacity-70">Doble con ventana grande.</p><div class="flex justify-between items-center mt-4"><span class="font-bold text-lg">$60</span><a href="#reservar" class="clay-sm bg-pink px-5 py-2 font-medium">Elegir</a></div></article>
+      <article class="clay bg-white p-4"><img loading="lazy" alt="Cuarto luna" class="h-48 w-full object-cover" style="border-radius:1.4rem" src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=70"><h3 class="font-semibold text-xl mt-4">Cuarto Luna</h3><p class="text-sm opacity-70">Literas y rincón de juegos.</p><div class="flex justify-between items-center mt-4"><span class="font-bold text-lg">$90</span><a href="#reservar" class="clay-sm bg-yellow px-5 py-2 font-medium">Elegir</a></div></article>
+      <article class="clay bg-white p-4"><img loading="lazy" alt="Cuarto estrella" class="h-48 w-full object-cover" style="border-radius:1.4rem" src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=800&q=70"><h3 class="font-semibold text-xl mt-4">Cuarto Estrella</h3><p class="text-sm opacity-70">Suite con sala y terraza.</p><div class="flex justify-between items-center mt-4"><span class="font-bold text-lg">$140</span><a href="#reservar" class="clay-sm bg-lilac px-5 py-2 font-medium">Elegir</a></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVA -->
+<section id="reservar" class="max-w-4xl mx-auto px-6 py-16">
+  <div class="clay bg-pink p-8 sm:p-12">
+    <h2 class="text-3xl font-bold">¡Reserva en un minuto!</h2>
+    <form class="grid sm:grid-cols-2 gap-4 mt-6" onsubmit="event.preventDefault();alert('¡Listo! Te escribiremos pronto.')">
+      <input required aria-label="Nombre" placeholder="Tu nombre" class="clay-sm bg-white px-5 py-3 outline-none">
+      <input required type="email" aria-label="Correo" placeholder="Tu correo" class="clay-sm bg-white px-5 py-3 outline-none">
+      <input type="date" aria-label="Llegada" class="clay-sm bg-white px-5 py-3 outline-none">
+      <select aria-label="Cuarto" class="clay-sm bg-white px-5 py-3 outline-none"><option>Cuarto Sol</option><option>Cuarto Luna</option><option>Cuarto Estrella</option></select>
+      <button class="clay-sm bg-yellow py-3 font-semibold text-lg sm:col-span-2">Enviar</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="max-w-6xl mx-auto px-6 pb-10 flex flex-col md:flex-row gap-6 items-center justify-between">
+  <p class="font-bold text-lg"><i class="bi bi-house-heart-fill text-pink-500"></i> Casita Candy Inn</p>
+  <p class="text-sm opacity-70">Calle Arcoíris 7 · +00 777 888 999 · hola@casitacandy.com</p>
+  <div class="flex gap-3">
+    <a aria-label="Facebook" href="#" class="clay-sm bg-pink w-11 h-11 grid place-items-center"><i class="bi bi-facebook"></i></a>
+    <a aria-label="Instagram" href="#" class="clay-sm bg-yellow w-11 h-11 grid place-items-center"><i class="bi bi-instagram"></i></a>
+    <a aria-label="TikTok" href="#" class="clay-sm bg-mint w-11 h-11 grid place-items-center"><i class="bi bi-tiktok"></i></a>
+    <a aria-label="YouTube" href="#" class="clay-sm bg-lilac w-11 h-11 grid place-items-center"><i class="bi bi-youtube"></i></a>
+  </div>
+</footer>
+<script>
+  const b=document.getElementById('burger'),m=document.getElementById('mobileMenu');
+  b.addEventListener('click',()=>{const o=m.classList.toggle('hidden');b.setAttribute('aria-expanded',!o);b.innerHTML=o?'<i class="bi bi-list"></i>':'<i class="bi bi-x-lg"></i>'});
+  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.add('hidden');b.innerHTML='<i class="bi bi-list"></i>'}));
+  document.querySelectorAll('img').forEach(i=>{const f=()=>{i.onerror=null;i.src='https://picsum.photos/seed/'+encodeURIComponent(i.alt||'hotel')+'/900/700'};i.addEventListener('error',f);if(i.complete&&i.naturalWidth===0)f()});
+</script>
+</body>
+</html>

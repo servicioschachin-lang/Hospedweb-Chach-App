@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maison Blanc | Landing – Minimalismo (Tailwind)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<style>
+  body{font-family:'Inter',sans-serif;font-weight:300;background:#fff;color:#1c1c1c}
+  .serif{font-family:'Cormorant Garamond',serif;font-weight:500}
+  .link{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .3s}
+  .link:hover{background-size:100% 1px}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #5f7385;outline-offset:4px}
+  input,select{background:transparent;border:0;border-bottom:1px solid #1c1c1c;border-radius:0;padding:.75rem 0;outline:none;width:100%}
+  input:focus,select:focus{border-bottom-width:2px}
+</style>
+</head>
+<body>
+<header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
+  <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#inicio" class="serif text-2xl tracking-wide">Maison Blanc</a>
+    <ul class="hidden md:flex gap-10 text-sm">
+      <li><a class="link" href="#inicio">Inicio</a></li><li><a class="link" href="#habitaciones">Habitaciones</a></li>
+      <li><a class="link" href="#hotel">El hotel</a></li><li><a class="link" href="#reservar">Reservar</a></li>
+    </ul>
+    <button id="burger" aria-label="Abrir menú" aria-expanded="false" class="md:hidden text-2xl"><i class="bi bi-list"></i></button>
+  </nav>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-neutral-200 bg-white">
+    <ul class="px-6 py-4 grid gap-4 text-lg serif">
+      <li><a href="#inicio">Inicio</a></li><li><a href="#habitaciones">Habitaciones</a></li><li><a href="#hotel">El hotel</a></li><li><a href="#reservar">Reservar</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- HERO dividido -->
+<section id="inicio" class="pt-16 min-h-screen grid lg:grid-cols-2">
+  <div class="flex items-center px-6 sm:px-16 py-16 order-2 lg:order-1">
+    <div class="max-w-md">
+      <p class="text-sm text-neutral-500">Hotel boutique · 12 habitaciones</p>
+      <h1 class="serif text-5xl sm:text-7xl leading-[1.02] mt-4">Menos, pero mejor.</h1>
+      <p class="mt-6 leading-relaxed text-neutral-600">Espacios luminosos, materiales nobles y un servicio discreto. Todo lo necesario, nada de más.</p>
+      <div class="mt-10 flex items-center gap-8">
+        <a href="#reservar" class="bg-[#1c1c1c] text-white px-8 py-3 text-sm hover:bg-[#5f7385] transition">Reservar</a>
+        <a href="#habitaciones" class="link text-sm">Ver habitaciones</a>
+      </div>
+    </div>
+  </div>
+  <div class="order-1 lg:order-2 h-[55vh] lg:h-auto"><img alt="Habitación blanca" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1400&q=70"></div>
+</section>
+
+<!-- EL HOTEL -->
+<section id="hotel" class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-3 gap-12">
+  <div><i class="bi bi-brightness-low text-2xl"></i><h2 class="serif text-2xl mt-4">Luz natural</h2><p class="mt-2 text-neutral-600 leading-relaxed">Ventanales orientados al este para despertar sin alarma.</p></div>
+  <div><i class="bi bi-droplet text-2xl"></i><h2 class="serif text-2xl mt-4">Baños de piedra</h2><p class="mt-2 text-neutral-600 leading-relaxed">Ducha de lluvia y productos sin perfume.</p></div>
+  <div><i class="bi bi-cup-hot text-2xl"></i><h2 class="serif text-2xl mt-4">Desayuno sencillo</h2><p class="mt-2 text-neutral-600 leading-relaxed">Pan del día, fruta y café, servido hasta las 11.</p></div>
+</section>
+
+<!-- HABITACIONES -->
+<section id="habitaciones" class="bg-neutral-100 py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="serif text-4xl sm:text-5xl">Habitaciones</h2>
+    <div class="grid md:grid-cols-3 gap-10 mt-14">
+      <article><img loading="lazy" alt="Habitación clásica" class="aspect-[4/5] w-full object-cover" src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=70"><div class="flex justify-between items-baseline mt-4"><h3 class="serif text-2xl">Clásica</h3><span class="text-sm">$130</span></div><p class="text-sm text-neutral-600 mt-1">Cama queen · 24 m²</p></article>
+      <article class="md:mt-12"><img loading="lazy" alt="Habitación superior" class="aspect-[4/5] w-full object-cover" src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=70"><div class="flex justify-between items-baseline mt-4"><h3 class="serif text-2xl">Superior</h3><span class="text-sm">$180</span></div><p class="text-sm text-neutral-600 mt-1">Cama king · 32 m²</p></article>
+      <article><img loading="lazy" alt="Suite" class="aspect-[4/5] w-full object-cover" src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=800&q=70"><div class="flex justify-between items-baseline mt-4"><h3 class="serif text-2xl">Suite</h3><span class="text-sm">$260</span></div><p class="text-sm text-neutral-600 mt-1">Sala y terraza · 48 m²</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGEN DE FONDO + CITA -->
+<section class="relative h-[60vh] flex items-center justify-center text-center text-white bg-cover bg-center" style="background-image:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1800&q=70')">
+  <p class="serif text-3xl sm:text-5xl max-w-3xl px-6 leading-tight">La calma también es una forma de lujo.</p>
+</section>
+
+<!-- RESERVAR -->
+<section id="reservar" class="max-w-3xl mx-auto px-6 py-24">
+  <h2 class="serif text-4xl sm:text-5xl">Reservar</h2>
+  <form class="grid sm:grid-cols-2 gap-x-10 gap-y-6 mt-12" onsubmit="event.preventDefault();alert('Gracias, le responderemos pronto.')">
+    <input required aria-label="Nombre" placeholder="Nombre">
+    <input required type="email" aria-label="Correo" placeholder="Correo">
+    <input type="date" aria-label="Llegada">
+    <select aria-label="Habitación"><option>Clásica</option><option>Superior</option><option>Suite</option></select>
+    <button class="sm:col-span-2 bg-[#1c1c1c] text-white py-3 text-sm hover:bg-[#5f7385] transition mt-4">Enviar solicitud</button>
+  </form>
+</section>
+</main>
+
+<footer class="border-t border-neutral-200">
+  <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row gap-6 items-center justify-between text-sm">
+    <p class="serif text-xl">Maison Blanc</p>
+    <p class="text-neutral-500">Rue Claire 9 · +00 222 333 444 · bonjour@maisonblanc.com</p>
+    <div class="flex gap-5 text-lg">
+      <a aria-label="Facebook" class="hover:text-[#5f7385]" href="#"><i class="bi bi-facebook"></i></a>
+      <a aria-label="Instagram" class="hover:text-[#5f7385]" href="#"><i class="bi bi-instagram"></i></a>
+      <a aria-label="Pinterest" class="hover:text-[#5f7385]" href="#"><i class="bi bi-pinterest"></i></a>
+      <a aria-label="LinkedIn" class="hover:text-[#5f7385]" href="#"><i class="bi bi-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+<script>
+  const b=document.getElementById('burger'),m=document.getElementById('mobileMenu');
+  b.addEventListener('click',()=>{const o=m.classList.toggle('hidden');b.setAttribute('aria-expanded',!o);b.innerHTML=o?'<i class="bi bi-list"></i>':'<i class="bi bi-x-lg"></i>'});
+  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.add('hidden');b.innerHTML='<i class="bi bi-list"></i>'}));
+  document.querySelectorAll('img').forEach(i=>{const f=()=>{i.onerror=null;i.src='https://picsum.photos/seed/'+encodeURIComponent(i.alt||'hotel')+'/900/700'};i.addEventListener('error',f);if(i.complete&&i.naturalWidth===0)f()});
+</script>
+</body>
+</html>
